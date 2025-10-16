@@ -1,0 +1,34 @@
+{
+	"name": "ripple-routes",
+	"version": "0.1.0",
+	"type": "module",
+	"engines": {
+		"node": ">=20.0.0"
+	},
+	"scripts": {
+		"build": "pnpm build:vite && pnpm build:tsc",
+		"build:vite": "vite build",
+		"build:tsc": "tsc",
+		"prepack": "pnpm build"
+	},
+	"main": "./dist/index.js",
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		}
+	},
+	"files": ["dist"],
+	"keywords": [
+		"typescript",
+		"ripple",
+		"routing",
+		"router"
+	],
+	"devDependencies": {
+		"@types/node": "^24.8.0",
+		"typescript": "^5.9.2",
+		"vite": "^7.1.5"
+	},
+	"license": "MIT"
+}
