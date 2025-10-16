@@ -12,5 +12,11 @@ export default defineConfig(({ mode }) => ({
 			formats: ['es'],
 			fileName: 'index'
 		},
+		rollupOptions: {
+			external: [
+				'node:fs',
+				'node:path'
+			]
+		}
 	}
 }));
